@@ -1,0 +1,92 @@
+    
+.i18n-dropdown-wrapper{
+    margin: 30px;
+    display: inline-block;
+    z-index:1;
+    background:#fff;  
+    border-radius:4px;
+}
+
+.i18n-dropdown-wrapper .lang{
+    padding:10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.i18n-dropdown-wrapper .lang.selected{
+  display:none;
+}
+
+.i18n-dropdown-wrapper .lang img, 
+.i18n-dropdown-wrapper .lang span.lang-txt {
+  margin-left:5px;
+  color: #444444;
+}
+
+.i18n-dropdown-wrapper .current-lang{
+  cursor:pointer;
+  /* text-transform:uppercase; */
+  overflow:hidden;
+}
+
+.i18n-dropdown-wrapper .lang img{
+  width:20px;
+  height: 15px;
+  margin-left:0;
+}
+
+.i18n-dropdown-wrapper .lang span span{
+  color:#999;
+  font-weight:400;
+}
+
+.i18n-dropdown-wrapper .lang span.fa{
+  font-size:12px;
+  position:relative;
+  top:-1px;
+  margin-left:3px;
+}
+
+.i18n-dropdown-wrapper .i18n-lang-select{
+    transform:translateY(-20px);
+    opacity:0;
+    cursor:pointer;
+    display:none;
+    -webkit-transition: all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+	-moz-transition:    all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+	-o-transition:      all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+	-ms-transition:     all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+	transition:         all .3s cubic-bezier(.25, 1.15, .35, 1.15);
+}
+
+.i18n-dropdown-wrapper.active .i18n-lang-select{
+  display:block;
+}
+
+.i18n-dropdown-wrapper .i18n-lang-select.active{
+  opacity:1;
+   transform:translateY(-0px);
+}
+
+.i18n-dropdown-wrapper .i18n-lang-select .lang:hover{
+  background:#5766b2;
+  color:#fff;
+}
+
+.i18n-dropdown-wrapper .i18n-lang-select .lang:hover span{
+  color:#fff;
+}
+
+.i18n-dropdown-wrapper:hover,
+.i18n-dropdown-wrapper.active {
+    box-shadow:rgba(0,0,0,0.2) 0 5px 15px;  
+    -webkit-transition: all 0.3s cubic-bezier(0,.99,.44,.99);
+	-moz-transition: all 0.3s cubic-bezier(0,.99,.44,.99);
+	-o-transition: all 0.3s cubic-bezier(0,.99,.44,.99);
+	-ms-transition: all 0.3s cubic-bezier(0,.99,.44,.99);
+	transition: all 0.3s cubic-bezier(0,.99,.44,.99);
+}
+
+.i18n-dropdown-wrapper.active .lang{
+  border-bottom:1px solid #eaeaea;
+}
